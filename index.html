@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODAK Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://cdn.orderonline.id/uploads/images_6545681751799382235.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fef9c3; /* yellow-100 */
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.03);
+            transition: transform 0.3s ease;
+        }
+
+        .badge {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .search-bar:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #fde047;
+        }
+
+        .buy-button {
+            transition: all 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #ca8a04;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-yellow-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-crown text-2xl text-yellow-600 mr-2"></i>
+                <h1 class="text-xl font-bold text-yellow-600">PRODUK COLLECTION</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Grid -->
+    <div class="container mx-auto max-w-screen-xl px-4 md:px-6 py-8 md:py-12">
+        <div class="flex flex-col md:flex-row items-center justify-between mb-6 md:mb-8">
+            <h2 class="text-xl md:text-2xl font-bold text-yellow-700 mb-4 md:mb-0">Our Best Selling Produk</h2>
+        </div>
+
+        <!-- Grid jadi 2 kolom langsung di HP -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+            <!-- Product 1 -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://down-my.img.susercontent.com/file/sg-11134201-7rdx1-lxmn4zhivropba.webp" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">Bra Busa Tebal Push Up</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(8.9k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 159.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 318.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://bra-busa-tebal-push-up.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://id-live-01.slatic.net/p/6f1e8447ea25d5a34805262f4752d352.jpg" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">Jaket Olahraga Anti UV</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(5.1k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 319.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 638.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://jaket-olahraga-anti-uv.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://cdn.orderonline.id/uploads/images_8443471756932360338.png" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">𝗠𝗲𝘁𝗮𝗹 𝗛𝗮𝗻𝗴𝗶𝗻𝗴 𝗣𝗮𝗻𝘁𝘀 𝗥𝗮𝗰𝗸</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(2.9k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 175.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 350.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://metal-hanging-pants-rack.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 4 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://cdn.orderonline.id/uploads/images_7508421756212334350.png" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">𝗕𝗼𝘅 𝗪𝗮𝗹𝗹 𝗠𝗼𝘂𝗻𝘁𝗲𝗱 𝗔𝗕𝗦</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(6.3k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 195.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 478.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://box-wall-mounted-abs.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+<!-- Product 5 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://i0.wp.com/www.otwocosmeticspk.com/wp-content/uploads/2024/11/03_chestnuts.jpg?resize=510%2C510&ssl=1?q=tbn:ANd9GcSjKFBAgFWmgr8DUFjhaJbj6nlcsa2N_4TIE3Zb8v2zbQmrPxol" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">𝗛𝗮𝘂𝘁𝗲 𝗟𝗶𝗽𝘀𝘁𝗶𝗰𝗸 𝗠𝗼𝗶𝘀𝘁𝘂𝗿𝗶𝘇𝗶𝗻𝗴</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(5.6k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 249.500</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 499.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://haute-lipstick-moisturizing.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 6 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://shopping.c.yimg.jp/lib/koei/y7093_bk.jpg" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">𝗦𝗸𝗶𝗿𝘁 𝗞𝗼𝗿𝗲𝗮𝗻 𝗝𝗮𝗽𝗮𝗻𝗲𝘀𝗲 𝗦𝘁𝘆𝗹𝗲</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(7.9k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 206.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 412.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://skirt-korean-japanese-style.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+         <!-- Product 7 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://cdn.orderonline.id/uploads/images_7399801756673160853.png" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">𝗣𝗼𝗿𝘁𝗮𝗯𝗹𝗲 𝗠𝗶𝗻𝗶 𝗧𝗿𝗮𝘃𝗲𝗹 𝗠𝗮𝗸𝗲𝘂𝗽 𝗕𝗮𝗴</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(4.2k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 167.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 334.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://portable-mini-travel-makeup-bag.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 8 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://cdn.orderonline.id/uploads/images_3596091756585620452.png" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">𝗪𝗼𝗺𝗲𝗻'𝘀 𝗣𝘂𝘀𝗵 𝗨𝗽 𝗪𝗶𝗿𝗲𝗹𝗲𝘀𝘀 𝗕𝗿𝗮</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(4.8k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 195.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 390.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://women-s-push-up-wireless-bra.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 9 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://cdn.orderonline.id/uploads/images_7656701749046192378.png" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">𝑩𝒍𝒂𝒄𝒌𝒑𝒊𝒏𝒌 𝑹𝒐𝒌 𝑷𝒆𝒏𝒅𝒆𝒌 𝑾𝒂𝒏𝒊𝒕𝒂</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(9.9k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 218.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 436.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://rok-blackpink.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 10 (copy) -->
+            <div class="product-card bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <div class="relative">
+                    <img src="https://cdn.orderonline.id/uploads/images_2108191729424075669.png" 
+                         alt="Premium Chiffon Hijab" 
+                         class="w-full h-48 object-cover product-image">
+                    <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded-full badge">BESTSELLER</div>
+                </div>
+                <div class="p-3">
+                    <h4 class="text-sm md:text-lg font-medium text-gray-800 mb-1">Mini Ceramic Curling Iron</h4>
+                    <div class="flex items-center mb-1">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 ml-1">(8.5k)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <span class="text-yellow-700 font-bold text-sm md:text-lg">Rp 150.000</span>
+                            <span class="text-gray-400 text-xs line-through ml-1">Rp 300.000</span>
+                        </div>
+                        <button class="text-yellow-700 hover:text-yellow-800">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <a href="https://mini-ceramic-curling-irons.hellashop.web.id/" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center py-1 md:py-2 rounded-md text-xs md:text-sm font-medium buy-button">
+                        Belanja Sekarang
+                    </a>
+                </div>
+            </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-6">
+            <button class="bg-white border border-yellow-500 text-yellow-600 px-6 py-2 rounded-full font-medium hover:bg-yellow-50 transition duration-300 text-sm">
+                TERIMAKASIH SUDAH BELANJA DI TOKO KAMI.
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.product-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.innerHTML = this.innerHTML.includes('far fa-heart')
+                    ? '<i class="fas fa-heart text-yellow-600"></i>'
+                    : '<i class="far fa-heart"></i>';
+            });
+        });
+    </script>
+</body>
+</html>
